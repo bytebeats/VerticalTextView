@@ -1,19 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="top|center_horizontal"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <me.bytebeats.views.vertical.VerticalTextView
+            android:layout_width="wrap_content"
+            app:text="@string/text_zhuge_applause"
+            app:columnCharCount="13"
+            android:background="#ccc"
+            android:layout_height="wrap_content" />
+
+        <me.bytebeats.views.vertical.VerticalTextView
+            android:layout_width="wrap_content"
+            app:text="@string/text_zhuge_applause"
+            app:columnCharCount="13"
+            android:background="#faa"
+            app:textStyle="bold"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content">
+
+        <me.bytebeats.views.vertical.VerticalTextView
+            android:layout_width="wrap_content"
+            app:text="@string/text_zhuge_applause"
+            app:columnCharCount="13"
+            android:background="#ccc"
+            app:textStyle="italic"
+            android:layout_height="wrap_content" />
+
+        <me.bytebeats.views.vertical.VerticalTextView
+            android:layout_width="wrap_content"
+            app:text="@string/text_zhuge_applause"
+            app:columnCharCount="13"
+            android:background="#faa"
+            app:textStyle="bold|italic"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/vtv_in_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="VerticalTextView in RecyclerView"
         android:includeFontPadding="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

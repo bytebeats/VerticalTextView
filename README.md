@@ -1,2 +1,2 @@
 # VerticalTextView
-A View display text vertially.
+A View displays text vertically.
